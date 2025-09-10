@@ -10,7 +10,7 @@ import ContactUs from './components/Contact';
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename='/E-BOOK-PDF'>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
