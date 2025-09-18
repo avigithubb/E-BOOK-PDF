@@ -11,7 +11,7 @@ const Home = () =>{
 
     useEffect(()=>{
         if(isActive){
-        fetch(`https://djgh1w1f3j.execute-api.ap-south-1.amazonaws.com/Prod/hello/`)
+        fetch(`https://avle30zmf0.execute-api.ap-south-1.amazonaws.com/Prod/hello/`)
         .then(res => res.json())
         .then(data =>{
             console.log(data);
