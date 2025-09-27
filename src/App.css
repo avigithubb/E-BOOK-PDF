@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sacramento&display=swap');
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+  background-color: azure;
+  box-shadow: rgb(238, 238, 17);
 }
 
 .logo {
@@ -35,8 +39,44 @@
 
 .card {
   padding: 2em;
+  box-shadow: 0 0 2em #00000020;
 }
 
 .read-the-docs {
   color: #888;
+}
+
+.glass-effect{
+  --border-width: 1px;
+  
+  background: hsl(255, 44%, 7%, 0.2);
+  backdrop-filter: blur(10px);
+  position: relative;
+}
+
+.glass-effect::before{
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  border-radius: inherit;
+  border: var(--border-width) solid transparent;
+  background: linear-gradient(0, 0) border-box;
+  mask: linear-gradient(black) border-box,
+        linear-gradient(black) padding-box
+        ;
+  mask-composite: subtract;
+
+}
+
+.font-sacramento {
+  font-family: 'Sacramento', cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
